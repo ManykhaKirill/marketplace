@@ -1,5 +1,4 @@
-import { Suspense } from 'react';
-import { Catalog, CatalogSkeleton } from '@features/catalog';
+import { Catalog } from '@features/catalog';
 import { getSearchResults } from '@features/search';
 
 export default async function SearchPage({ 

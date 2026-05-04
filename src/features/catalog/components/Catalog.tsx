@@ -1,9 +1,11 @@
+import { Suspense } from 'react';
 import { ContainerGrid } from '@components/ui/container-grid';
 import { EmptyResult } from '@components/ui/empty-result';
 import { Pagination } from '@components/layout/Pagination';
 
 import type { CatalogItemType } from '../types';
 import { CatalogItem } from './CatalogItem';
+import { PaginationSkeleton } from './CatalogSkeleton';
 
 
 
@@ -23,7 +25,9 @@ export async function Catalog({
                         <CatalogItem key={item.id} {...item} />
                     ))}
                 </ContainerGrid>
-                <Pagination total={total} />
+                <Suspense fallback={<PaginationSkeleton />}>
+                    <Pagination total={total} />
+                </Suspense>
             </>
         ) : (
             <EmptyResult/>

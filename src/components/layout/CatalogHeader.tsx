@@ -1,5 +1,6 @@
+import { Suspense } from 'react';
 import { CategoriesFilter } from '@features/catalog';
-import { Sort } from '@features/catalog';
+import { Sort, SortSkeleton } from '@features/catalog';
 import { BreadCrumbs } from './BreadCrumbs';
 
 export function CatalogHeader() {
@@ -10,7 +11,9 @@ export function CatalogHeader() {
             </div>
             <BreadCrumbs />
             <div className='flex flex-row justify-end'>
-                <Sort />
+                <Suspense fallback={<SortSkeleton />}>
+                    <Sort />
+                </Suspense>
             </div>
         </div>
     )

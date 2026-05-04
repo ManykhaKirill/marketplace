@@ -6,10 +6,13 @@ export function CatalogItem({
     ...item
 }: CatalogItemType
 ) {
+    const slug = item.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
     return (
-        
             <Link 
-                href={`/product/${item.id}`}
+                href={{
+                    pathname: `/product/${slug}`,
+                    query: { productId: item.id}
+                }}
                 className='
                     lg:max-h-88
                     group

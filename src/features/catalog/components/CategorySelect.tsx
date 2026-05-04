@@ -1,6 +1,6 @@
 'use client'
 import type { ChangeEvent } from 'react'
-import { useRouter, usePathname, useSearchParams  } from 'next/navigation';
+import { useRouter, usePathname  } from 'next/navigation';
 import { hideFilters } from '@lib/util';
 
 export function CategorySelect({ categories }: {
@@ -8,7 +8,6 @@ export function CategorySelect({ categories }: {
 }) {
   const { push, replace } = useRouter();
   const pathName = usePathname();
-  const searchParams = useSearchParams();
   const isHidden =  hideFilters(pathName);
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {

@@ -24,12 +24,13 @@ export function Search() {
             items-center
             justify-center
             rounded-full
-            bg-neutral-900
+            bg-amber-500
             px-3
             py-1.5
             text-white
             transition
-            hover:bg-neutral-700
+            hover:bg-amber-600
+            cursor-pointer
             active:scale-95
           "
         >

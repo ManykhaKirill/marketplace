@@ -2,12 +2,12 @@ import { getProductById } from '@features/product/api/getProductById';
 import { Product } from '@features/product';
 
 export default async function ProductPage({
-    params
+    searchParams
 }: {
-    params: Promise<{ id: number }>
+    searchParams: Promise<{ productId: number }>
 }) {
-    const { id } = await params;
-    const product = await getProductById(id);
+    const { productId } = await searchParams;
+    const product = await getProductById(productId);
 
     return (
             <Product {...product} />

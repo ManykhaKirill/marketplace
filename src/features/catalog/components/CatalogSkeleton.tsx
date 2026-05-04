@@ -41,7 +41,7 @@ export function FilterSkeleton() {
     )
 }
 
-function SortSkeleton() {
+export function SortSkeleton() {
     return (
         <div className='
             rounded-full
@@ -51,5 +51,17 @@ function SortSkeleton() {
             min-w-32
             '
         />
+    )
+}
+
+export function PaginationSkeleton() {
+    return (
+    <div className='flex flex-row justify-center items-center gap-2 mt-4'>
+        <div className="flex flex-row gap-2">
+            <div className='px-4 py-2 h-9 rounded-lg transition bg-neutral-200 animate-pulse' />
+            <div className='px-4 py-2 h-9 rounded-lg transition bg-neutral-200 animate-pulse' />
+            <div className='px-4 py-2 h-9 rounded-lg transition bg-neutral-200 animate-pulse' />
+        </div>
+    </div>
     )
 }

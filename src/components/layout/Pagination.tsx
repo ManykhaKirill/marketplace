@@ -33,12 +33,12 @@ export function Pagination({
               key={p}
               href={createPageURL(p)}
               className={`
-                px-4 py-2 rounded-lg border text-sm
+                px-4 py-2 rounded-lg text-sm
                 transition
                 ${
                   p === currentPage
-                    ? "bg-black text-white"
-                    : "bg-white hover:bg-neutral-100"
+                    ? "bg-amber-500 text-white hover:cursor-default"
+                    : "bg-neutral-100 hover:bg-neutral-200"
                 }
               `}
             >
@@ -48,7 +48,7 @@ export function Pagination({
         )}
       </div>
       <PaginationArrow href={createPageURL(currentPage + 1)} direction='right' isDisabled={currentPage >= totalPages} />
-      </div>
+    </div>
     )
 }
 

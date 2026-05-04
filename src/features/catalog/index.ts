@@ -1,6 +1,6 @@
 export { Catalog } from './components/Catalog';
 export { CatalogItem } from './components/CatalogItem';
-export { CatalogSkeleton } from './components/CatalogSkeleton';
+export { CatalogSkeleton, SortSkeleton } from './components/CatalogSkeleton';
 export { CategoriesFilter } from './components/CategoriesFilter';
 export { Sort } from './components/Sort';
 

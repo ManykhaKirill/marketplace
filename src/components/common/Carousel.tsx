@@ -8,7 +8,7 @@ export function Carousel({
     images,
     alt,
     autoSlide = false,
-    autoSlideInterval = 3000,
+    autoSlideInterval = 5000,
 }: {
     id: number;
     images: string[];
