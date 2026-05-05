@@ -8,7 +8,7 @@ import { CartSummary } from './CartSummary';
 
 export function Cart() {
     const { cartItems } = useCartStore();
-//grid grid-cols-1 gap-6 lg:grid-cols-3
+
     return (
         cartItems?.length > 0 ? (
             <div className='flex flex-col lg:flex-row gap-2'>

@@ -28,13 +28,17 @@ export function Pagination({
     <div className={totalPages > 1 ? 'flex flex-row justify-center items-center gap-2 mt-4' : 'hidden'}>
       <PaginationArrow href={createPageURL(currentPage - 1)} direction='left' isDisabled={currentPage <= 1} />
       <div className="flex flex-row gap-2">
-        {allPages.map((p, index) => (
-            <Link
+        {allPages.map((p, index) => {
+          let style = 'px-4 py-2 rounded-lg text-sm transition';
+
+          return (
+            p === '...' ?
+            (<div key={p + index} className={style}>{p}</div>) : 
+            (<Link
               key={p}
               href={createPageURL(p)}
               className={`
-                px-4 py-2 rounded-lg text-sm
-                transition
+                ${style}
                 ${
                   p === currentPage
                     ? "bg-amber-500 text-white hover:cursor-default"
@@ -43,9 +47,10 @@ export function Pagination({
               `}
             >
               {p}
-            </Link>
+            </Link>)
           )
-        )}
+        })
+      }
       </div>
       <PaginationArrow href={createPageURL(currentPage + 1)} direction='right' isDisabled={currentPage >= totalPages} />
     </div>

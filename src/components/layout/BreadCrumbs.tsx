@@ -4,11 +4,7 @@ import { generateBreadCrumbs, hideBreadCrumbs } from '@lib/util';
 import { CircleArrowLeft } from "lucide-react";
 import { BackButton } from '../common/BackButton';
 
-export function BreadCrumbs({
-    productName
-}: {
-    productName?: string
-}) {
+export function BreadCrumbs() {
     const pathName = usePathname();
     const path = generateBreadCrumbs(pathName);
     const isHidden = hideBreadCrumbs(pathName);

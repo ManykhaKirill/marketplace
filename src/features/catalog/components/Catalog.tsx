@@ -30,7 +30,7 @@ export async function Catalog({
                 </Suspense>
             </>
         ) : (
-            <EmptyResult/>
+            <EmptyResult />
         )
         
     )

@@ -16,32 +16,29 @@ export function EmptyResult({
          {toMain ? (
             <Link href='/'>
                 <Button style='
-                    border border-amber-600 
                     rounded-xl
-                    m-2 p-2 gap-2
-                    bg-amber-500
-                    hover:bg-amber-600
+                    m-2 p-3 gap-1
+                    bg-neutral-100
+                    hover:bg-amber-500
                 '>
                     <Store 
-                        size={22} 
-                        className='text-white'
+                        size={20} 
                     />
-                    <span className='text-white'>Back to catalog</span>
+                    <span>Back to catalog</span>
                 </Button>
             </Link>
             ) : (
-            <BackButton style='
-                border border-amber-600 
+            <BackButton style='  
                 rounded-xl
-                m-2 p-2 gap-2
-                bg-amber-500
-                hover:bg-amber-600
+                m-2 p-3 gap-1
+                bg-neutral-100
+                hover:bg-amber-500
             '>
                 <ArrowLeft 
-                    size={22} 
-                    className='text-white'
+                    size={20} 
+                    
                 />
-                <span className='text-white'>Back to shop</span>
+                <span>Back to shop</span>
             </BackButton>
             )}
         </div>
