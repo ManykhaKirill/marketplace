@@ -11,8 +11,8 @@ export const Header = () => {
             <div className="flex w-full flex-row items-center justify-between mx-auto max-w-450 px-4 sm:px-6 lg:px-8 h-16 gap-6">
                 <div className="flex font-semibold justify-start">
                     <Link href='/' className='flex flex-row items-center text-lg'>
-                        <Image src={logo} alt="AnyStore" width={60} height={60} />
-                        <h3 className='hidden lg:flex'>AnyStore</h3>
+                        <Image src={logo} alt="AnyMarket" width={60} height={60} />
+                        <h3 className='hidden lg:flex'>AnyMarket</h3>
                     </Link>
                 </div>
                 <div className='flex flex-row w-full justify-center'>
